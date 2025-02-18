@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/quentinroland/Developer/RolandEntreprise/roland-container/src/app/contact/page.js"],"sourcesContent":["\"use client\";\nimport Homepage from \"./components/Homepage/Homepage\";\nimport { Navigation } from \"./components/Navigation\";\nimport { useTheme } from \"./context/ThemeContext\";\nimport HeroSection from \"./components/Homepage/HeroSection\";\nimport Spacer from \"./components/Spacer\";\n\nexport default function Home() {\n  const { theme } = useTheme();\n  return (\n    <div className={`bg-${theme.colors.background} min-h-screen`}>\n      <Navigation /> {/* Navbar */}\n      <HeroSection /> {/* Hero Section en plein écran */}\n      <Spacer lg />\n      <div className=\"mx-auto px-4 max-w-7xl\">\n        <Homepage />\n      </div>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;;;;;AAOe,SAAS;IACtB,MAAM,EAAE,KAAK,EAAE,GAAG;IAClB,qBACE,8OAAC;QAAI,WAAW,CAAC,GAAG,EAAE,MAAM,MAAM,CAAC,UAAU,CAAC,aAAa,CAAC;;0BAC1D,8OAAC;;;;;YAAa;0BACd,8OAAC;;;;;YAAc;0BACf,8OAAC;gBAAO,EAAE;;;;;;0BACV,8OAAC;gBAAI,WAAU;0BACb,cAAA,8OAAC;;;;;;;;;;;;;;;;AAIT"}},
+    {"offset": {"line": 86, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
