@@ -315,7 +315,7 @@ const HeroSection = ()=>{
             className: "relative h-screen grid grid-cols-12",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "col-span-12 lg:col-span-5 flex flex-col justify-center px-8 lg:px-16 py-24 relative z-10",
+                    className: "col-span-12 lg:col-span-5 flex flex-col justify-center px-8 lg:px-16 py-24 relative z-10 mx-8",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                             className: "text-sm text-gray-500 mb-8",
@@ -329,17 +329,17 @@ const HeroSection = ()=>{
                             children: "ROLAND CONTAINER | LOCATION DE CONTAINERS"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                            lineNumber: 29,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h1, {
-                            className: "text-[4rem] leading-none font-bold mb-12 tracking-tight relative text-black",
+                            className: "text-[3.5rem] leading-none font-bold mb-12 tracking-tight relative text-black",
                             variants: textVariants,
                             initial: "hidden",
                             animate: "visible",
                             transition: {
                                 duration: 1,
-                                delay: 1
+                                delay: 0.5
                             },
                             children: [
                                 "Simplifiez vos chantiers, louez nos conteneurs",
@@ -355,17 +355,17 @@ const HeroSection = ()=>{
                                     },
                                     transition: {
                                         duration: 0.8,
-                                        delay: 1.5
+                                        delay: 1
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                                    lineNumber: 55,
+                                    lineNumber: 53,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                            lineNumber: 43,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -375,12 +375,12 @@ const HeroSection = ()=>{
                             animate: "visible",
                             transition: {
                                 duration: 0.8,
-                                delay: 2
+                                delay: 1.5
                             },
                             children: "Des solutions d'évacuement flexibles et sécurisées. Notre flotte de containers s'adapte à tous vos besoins logistiques."
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                            lineNumber: 67,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -393,12 +393,12 @@ const HeroSection = ()=>{
                                     animate: "visible",
                                     transition: {
                                         duration: 0.6,
-                                        delay: 3
+                                        delay: 2
                                     },
                                     children: "Nos solutions"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                                    lineNumber: 83,
+                                    lineNumber: 81,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -408,18 +408,18 @@ const HeroSection = ()=>{
                                     animate: "visible",
                                     transition: {
                                         duration: 0.6,
-                                        delay: 3.2
+                                        delay: 2.2
                                     },
                                     children: "Demander un devis"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                                    lineNumber: 95,
+                                    lineNumber: 93,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                            lineNumber: 82,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, this)
                     ]
@@ -440,20 +440,20 @@ const HeroSection = ()=>{
                                     className: "object-cover w-full h-full "
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                                    lineNumber: 114,
+                                    lineNumber: 112,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "absolute inset-0 bg-gradient-to-br from-white/90 via-white/50 to-transparent lg:hidden"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                                    lineNumber: 120,
+                                    lineNumber: 118,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                            lineNumber: 113,
+                            lineNumber: 111,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -473,13 +473,13 @@ const HeroSection = ()=>{
                             }
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                            lineNumber: 123,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Homepage/HeroSection.js",
-                    lineNumber: 111,
+                    lineNumber: 109,
                     columnNumber: 9
                 }, this)
             ]
@@ -1357,7 +1357,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#",
+                                                href: "/services",
                                                 className: "text-gray-400 hover:text-white transition-colors",
                                                 children: "Services"
                                             }, void 0, false, {
@@ -1372,7 +1372,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#",
+                                                href: "contact",
                                                 className: "text-gray-400 hover:text-white transition-colors",
                                                 children: "Contact"
                                             }, void 0, false, {
@@ -1412,7 +1412,7 @@ const Footer = ()=>{
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             className: "text-gray-400",
-                                            children: "01 23 45 67 89"
+                                            children: "+32 477 61 55 52"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Homepage/Footer.js",
                                             lineNumber: 54,
@@ -1428,7 +1428,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             className: "text-gray-400",
-                                            children: "123 Rue du Container, 75000 Paris"
+                                            children: "Chau. du Château Mondron 56, 6040 Jumet"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Homepage/Footer.js",
                                             lineNumber: 56,

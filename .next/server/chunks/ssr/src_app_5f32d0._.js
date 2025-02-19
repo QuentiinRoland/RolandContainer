@@ -1050,6 +1050,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 ;
 const ContactSection = ()=>{
+    const router = useRouter();
     // Variants pour le conteneur principal
     const containerVariants = {
         hidden: {
@@ -1092,6 +1093,9 @@ const ContactSection = ()=>{
             }
         }
     };
+    const handleDevisClick = ()=>{
+        router.push("/contact");
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "relative -mb-20 z-10",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1119,7 +1123,7 @@ const ContactSection = ()=>{
                     }
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                    lineNumber: 60,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1133,7 +1137,7 @@ const ContactSection = ()=>{
                                 children: "Une question sur nos services ?"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                                lineNumber: 70,
+                                lineNumber: 76,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -1142,7 +1146,7 @@ const ContactSection = ()=>{
                                 children: "Notre équipe d'experts est là pour vous conseiller sur le choix de votre container et répondre à toutes vos questions."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                                lineNumber: 77,
+                                lineNumber: 83,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -1154,21 +1158,22 @@ const ContactSection = ()=>{
                                 whileTap: {
                                     scale: 0.95
                                 },
+                                onClick: handleDevisClick,
                                 children: "Contactez-nous"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                                lineNumber: 85,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                        lineNumber: 69,
+                        lineNumber: 75,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                    lineNumber: 68,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1178,52 +1183,52 @@ const ContactSection = ()=>{
                             className: "absolute top-1/4 left-0 w-full h-px bg-white transform -rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 97,
+                            lineNumber: 104,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute top-1/3 left-0 w-full h-px bg-white transform rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 98,
+                            lineNumber: 105,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute top-1/2 left-0 w-full h-px bg-white transform rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 99,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute top-1/4 left-0 w-full h-px bg-white transform rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 100,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute top-1/3 left-0 w-full h-px bg-white transform rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 101,
+                            lineNumber: 108,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                    lineNumber: 96,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-            lineNumber: 53,
+            lineNumber: 59,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-        lineNumber: 52,
+        lineNumber: 58,
         columnNumber: 5
     }, this);
 };
@@ -1305,7 +1310,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#",
+                                                href: "/services",
                                                 className: "text-gray-400 hover:text-white transition-colors",
                                                 children: "Services"
                                             }, void 0, false, {
@@ -1320,7 +1325,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#",
+                                                href: "contact",
                                                 className: "text-gray-400 hover:text-white transition-colors",
                                                 children: "Contact"
                                             }, void 0, false, {
@@ -1360,7 +1365,7 @@ const Footer = ()=>{
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             className: "text-gray-400",
-                                            children: "01 23 45 67 89"
+                                            children: "+32 477 61 55 52"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Homepage/Footer.js",
                                             lineNumber: 54,
@@ -1376,7 +1381,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             className: "text-gray-400",
-                                            children: "123 Rue du Container, 75000 Paris"
+                                            children: "Chau. du Château Mondron 56, 6040 Jumet"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Homepage/Footer.js",
                                             lineNumber: 56,
@@ -1786,7 +1791,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$mo
 ;
 ;
 const AboutSection = ()=>{
-    // Variants pour les animations de texte dans le hero
     const textVariants = {
         hidden: {
             opacity: 0,
@@ -1797,7 +1801,6 @@ const AboutSection = ()=>{
             y: 0
         }
     };
-    // Variants pour les cartes d'info
     const cardVariants = {
         hidden: {
             opacity: 0,
@@ -1820,7 +1823,7 @@ const AboutSection = ()=>{
                         className: "bg-black/50 absolute inset-0"
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                        lineNumber: 38,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1838,10 +1841,10 @@ const AboutSection = ()=>{
                                     viewport: {
                                         once: true
                                     },
-                                    children: "Let's Talk About Your Dream Home"
+                                    children: "Des Solutions Adaptées à Vos Besoins"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                                    lineNumber: 42,
+                                    lineNumber: 39,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -1856,10 +1859,10 @@ const AboutSection = ()=>{
                                     viewport: {
                                         once: true
                                     },
-                                    children: "What does your dream home look like? Cozy and charming, spacious and modern, or something entirely different?"
+                                    children: "Quel que soit votre projet, nous avons le container qu'il vous faut. Location courte ou longue durée, nous nous adaptons à vos exigences."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                                    lineNumber: 52,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -1880,27 +1883,27 @@ const AboutSection = ()=>{
                                     viewport: {
                                         once: true
                                     },
-                                    children: "Get in Touch"
+                                    children: "Contactez-nous"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                                    lineNumber: 63,
+                                    lineNumber: 61,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                            lineNumber: 41,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                        lineNumber: 40,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                lineNumber: 32,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1924,10 +1927,10 @@ const AboutSection = ()=>{
                             viewport: {
                                 once: true
                             },
-                            children: "Your Guide to Finding Your Dream Home"
+                            children: "Comment Pouvons-Nous Vous Aider ?"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                            lineNumber: 82,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1935,21 +1938,21 @@ const AboutSection = ()=>{
                             children: [
                                 {
                                     icon: "💬",
-                                    title: "Online Enquiry",
-                                    description: "The quickest and easiest way to reach us! Fill out our secure online form and tell us about your dream home.",
-                                    action: "Get in Touch"
+                                    title: "Demande en Ligne",
+                                    description: "Rapide et efficace ! Remplissez notre formulaire en ligne et décrivez vos besoins en containers.",
+                                    action: "Faire une demande"
                                 },
                                 {
                                     icon: "📞",
-                                    title: "Call Us",
-                                    description: "Speak to a real estate expert today! Our friendly team is available by phone to answer your questions.",
-                                    action: "Call Us"
+                                    title: "Appelez-nous",
+                                    description: "Échangez avec nos experts ! Notre équipe est à votre écoute pour vous conseiller sur la meilleure solution.",
+                                    action: "Nous appeler"
                                 },
                                 {
                                     icon: "✉️",
-                                    title: "Write to Us",
-                                    description: "Take your time and share your details. Send us an email at contact@dreamhouse.io with your questions.",
-                                    action: "Write to Us"
+                                    title: "Écrivez-nous",
+                                    description: "Prenez le temps de détailler votre projet. Envoyez-nous un email à contact@roland-container.fr",
+                                    action: "Nous écrire"
                                 }
                             ].map((card, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                                     className: "bg-white p-8 rounded-lg shadow-lg",
@@ -1975,7 +1978,7 @@ const AboutSection = ()=>{
                                             children: card.icon
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                                            lineNumber: 130,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1983,7 +1986,7 @@ const AboutSection = ()=>{
                                             children: card.title
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                                            lineNumber: 131,
+                                            lineNumber: 127,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1991,7 +1994,7 @@ const AboutSection = ()=>{
                                             children: card.description
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                                            lineNumber: 132,
+                                            lineNumber: 128,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1999,35 +2002,35 @@ const AboutSection = ()=>{
                                             children: card.action
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                                            lineNumber: 133,
+                                            lineNumber: 129,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                                    lineNumber: 117,
+                                    lineNumber: 113,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                            lineNumber: 92,
+                            lineNumber: 89,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                    lineNumber: 81,
+                    lineNumber: 78,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-                lineNumber: 80,
+                lineNumber: 77,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/ContactPage/AboutSection.js",
-        lineNumber: 30,
+        lineNumber: 28,
         columnNumber: 5
     }, this);
 };

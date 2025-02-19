@@ -8,22 +8,25 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { nom, prenom, email, telephone } = req.body;
+    const { nom, prenom, email, telephone, entreprise, message } = req.body;
 
-    if (!nom || !prenom || !email || !telephone) {
+    if (!nom || !prenom || !email || !telephone || !entreprise || !message) {
       return res.status(400).json({ error: "Tous les champs sont requis" });
     }
 
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev", // Remplacez par votre domaine vérifié
-      to: "quentinroland12@gmail.com", // L'email où vous voulez recevoir les messages
+      from: "onboarding@resend.dev",
+      to: "rolandcontainer@hotmail.com",
       subject: "Nouveau message du formulaire de contact",
       html: `
         <h2>Nouveau message de contact</h2>
         <p><strong>Nom :</strong> ${nom}</p>
         <p><strong>Prénom :</strong> ${prenom}</p>
+        <p><strong>Entreprise :</strong> ${entreprise}</p>
         <p><strong>Email :</strong> ${email}</p>
         <p><strong>Téléphone :</strong> ${telephone}</p>
+        <p><strong>Message :</strong></p>
+        <p>${message.replace(/\n/g, "<br>")}</p>
       `,
     });
 

@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Services
@@ -38,7 +38,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="contact"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contact
@@ -51,10 +51,10 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-gray-400">01 23 45 67 89</li>
-              <li className="text-gray-400">contact@rolandcontainer.fr</li>
+              <li className="text-gray-400">+32 477 61 55 52</li>
+              <li className="text-gray-400">rolandcontainer@hotmail.com</li>
               <li className="text-gray-400">
-                123 Rue du Container, 75000 Paris
+                Chau. du Château Mondron 56, 6040 Jumet
               </li>
             </ul>
           </div>

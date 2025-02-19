@@ -1,135 +1,111 @@
 import React from "react";
-import Image from "next/image";
-import { delay, motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
+  const router = useRouter();
+
   const textVariants = {
-    hidden: {
-      opacity: 0,
-      x: -100,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-    },
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
   };
+
   const buttonVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-    },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
+
+  const handleSolutionsClick = () => {
+    router.push("/services");
+  };
+
+  const handleDevisClick = () => {
+    router.push("/contact");
+  };
+
   return (
     <div className="relative min-h-screen bg-white">
-      <div className="relative h-screen grid grid-cols-12">
-        <div className="col-span-12 lg:col-span-5 flex flex-col justify-center px-8 lg:px-16 py-24 relative z-10">
-          {/* Sous-titre - Apparaît en premier */}
+      <div className="relative h-screen grid grid-cols-1 lg:grid-cols-12">
+        {/* Text Content Section */}
+        <div className="col-span-1 lg:col-span-5 flex flex-col justify-center px-4 sm:px-8 lg:px-16 py-12 lg:py-24 relative z-10 mx-4 sm:mx-8">
           <motion.div
-            className="text-sm text-gray-500 mb-8"
+            className="text-xs sm:text-sm text-gray-500 mb-4 sm:mb-8"
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            transition={{
-              duration: 0.8,
-              delay: 0, // Premier élément, pas de délai
-            }}
+            transition={{ duration: 0.8 }}
           >
             ROLAND CONTAINER | LOCATION DE CONTAINERS
           </motion.div>
 
-          {/* Grand titre - Apparaît 2 secondes après */}
           <motion.h1
-            className="text-[4rem] leading-none font-bold mb-12 tracking-tight relative text-black"
+            className="text-2xl sm:text-4xl lg:text-[3.5rem] leading-tight lg:leading-none font-bold mb-6 sm:mb-12 tracking-tight relative text-black"
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            transition={{
-              duration: 1,
-              delay: 1, // 2 secondes de délai
-            }}
+            transition={{ duration: 1, delay: 0.5 }}
           >
             Simplifiez vos chantiers, louez nos conteneurs
-            {/* Barre orange - Apparaît juste après le titre */}
             <motion.div
-              className="absolute -bottom-4 left-0 w-32 h-2 bg-orange-500"
+              className="absolute -bottom-2 sm:-bottom-4 left-0 w-16 sm:w-32 h-1 sm:h-2 bg-orange-500"
               initial={{ opacity: 0, x: -220 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 1.5, // 1 seconde après le titre
-              }}
-            ></motion.div>
+              transition={{ duration: 0.8, delay: 1 }}
+            />
           </motion.h1>
 
-          {/* Description - Apparaît après la barre */}
           <motion.p
-            className="text-lg text-gray-600 mb-12 max-w-lg"
+            className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 max-w-lg"
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            transition={{
-              duration: 0.8,
-              delay: 2, // 0.5 seconde après la barre
-            }}
+            transition={{ duration: 0.8, delay: 1.5 }}
           >
             Des solutions d'évacuement flexibles et sécurisées. Notre flotte de
             containers s'adapte à tous vos besoins logistiques.
           </motion.p>
 
-          {/* Boutons - Apparaissent en dernier */}
           <div className="flex flex-col sm:flex-row gap-4">
             <motion.button
-              className="bg-black text-white px-8 py-4 flex items-center gap-2 hover:bg-gray-900 transition-colors"
+              onClick={handleSolutionsClick}
+              className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 flex items-center justify-center gap-2 hover:bg-gray-900 transition-colors text-sm sm:text-base"
               variants={buttonVariants}
               initial="hidden"
               animate="visible"
-              transition={{
-                duration: 0.6,
-                delay: 3, // 0.5 seconde après la description
-              }}
+              transition={{ duration: 0.6, delay: 2 }}
             >
               Nos solutions
             </motion.button>
             <motion.button
-              className="bg-white border-2 text-black border-black px-8 py-4 hover:bg-gray-50 transition-colors"
+              onClick={handleDevisClick}
+              className="bg-white border-2 text-black border-black px-6 sm:px-8 py-3 sm:py-4 hover:bg-gray-50 transition-colors text-sm sm:text-base text-center"
               variants={buttonVariants}
               initial="hidden"
               animate="visible"
-              transition={{
-                duration: 0.6,
-                delay: 3.2, // 0.2 seconde après le premier bouton
-              }}
+              transition={{ duration: 0.6, delay: 2.2 }}
             >
               Demander un devis
             </motion.button>
           </div>
         </div>
 
-        {/* Partie droite avec l'image en noir et blanc */}
-        <div className="absolute lg:relative lg:col-span-7 inset-0 bg-black/7">
-          {/* Image du camion en noir et blanc */}
+        {/* Image Section */}
+        <div className="absolute lg:relative lg:col-span-7 inset-0 bg-black/5">
           <div className="absolute inset-0">
             <img
               src="/wallpaperHero.jpg"
               alt="Camion de transport professionnel"
-              className="object-cover w-full h-full "
+              className="object-cover w-full h-full"
             />
-            {/* Overlay diagonal */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/50 to-transparent lg:hidden"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/50 to-transparent lg:hidden" />
           </div>
 
           <motion.div
-            className="hidden lg:block absolute -left-24 bottom-0 w-48 h-48 bg-orange-500"
-            initial={{ opacity: 0, y: 220 }} // Un seul objet avec les deux propriétés
+            className="hidden lg:block absolute -left-24 bottom-0 w-32 sm:w-48 h-32 sm:h-48 bg-orange-500"
+            initial={{ opacity: 0, y: 220 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.4, // Apparaît 0.4s après
-              ease: "easeOut",
-            }}
-          ></motion.div>
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          />
         </div>
       </div>
     </div>

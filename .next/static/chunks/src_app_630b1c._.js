@@ -12,9 +12,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$context$2f$ThemeContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/context/ThemeContext.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/menu.js [app-client] (ecmascript) <export default as Menu>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
 ;
 var _s = __turbopack_refresh__.signature();
 "use client";
+;
+;
 ;
 ;
 ;
@@ -22,7 +27,8 @@ const Navigation = ()=>{
     _s();
     const { theme } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$context$2f$ThemeContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"])();
     const [isScrolled, setIsScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    // Détecte le scroll
+    const [isMenuOpen, setIsMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navigation.useEffect": ()=>{
             const handleScroll = {
@@ -36,107 +42,194 @@ const Navigation = ()=>{
             })["Navigation.useEffect"];
         }
     }["Navigation.useEffect"], []);
+    const handleDevisClick = ()=>{
+        router.push("/contact");
+        setIsMenuOpen(false);
+    };
+    const handleLinkClick = ()=>{
+        setIsMenuOpen(false);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
         className: `fixed top-0 left-0 w-full z-20 transition-all duration-300 ${isScrolled ? "bg-white shadow-lg text-black" : "bg-transparent text-white"}`,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "max-w-7xl mx-auto px-4",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center justify-between h-20",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-[25%]",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            href: "/",
-                            className: "text-2xl font-bold text-orange-500",
-                            children: "Roland Container"
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "max-w-7xl mx-auto px-4 sm:px-6",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center justify-between h-16 sm:h-20",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex-shrink-0",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/",
+                                className: "text-xl sm:text-2xl font-bold text-orange-500",
+                                children: "Roland Container"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Navigation.js",
+                                lineNumber: 43,
+                                columnNumber: 13
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Navigation.js",
-                            lineNumber: 31,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/components/Navigation.js",
-                        lineNumber: 30,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-[50%]",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "ml-10 flex justify-center items-center space-x-8",
+                            lineNumber: 42,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex md:hidden",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>setIsMenuOpen(!isMenuOpen),
+                                className: "inline-flex items-center justify-center p-2 rounded-md text-current hover:text-orange-500 focus:outline-none",
+                                children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                    className: "h-6 w-6"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navigation.js",
+                                    lineNumber: 57,
+                                    columnNumber: 17
+                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
+                                    className: "h-6 w-6"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/Navigation.js",
+                                    lineNumber: 59,
+                                    columnNumber: 17
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Navigation.js",
+                                lineNumber: 52,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/Navigation.js",
+                            lineNumber: 51,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "hidden md:flex md:items-center md:space-x-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/",
-                                    className: `text-lg ${isScrolled ? "text-black" : "text-white"}`,
+                                    className: `text-base lg:text-lg transition-colors hover:text-orange-500 ${isScrolled ? "text-black" : "text-white"}`,
                                     children: "Accueil"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navigation.js",
-                                    lineNumber: 38,
-                                    columnNumber: 15
+                                    lineNumber: 65,
+                                    columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/services",
-                                    className: `text-lg ${isScrolled ? "text-black" : "text-white"}`,
+                                    className: `text-base lg:text-lg transition-colors hover:text-orange-500 ${isScrolled ? "text-black" : "text-white"}`,
                                     children: "Services"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navigation.js",
-                                    lineNumber: 46,
-                                    columnNumber: 15
+                                    lineNumber: 73,
+                                    columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/contact",
-                                    className: `text-lg ${isScrolled ? "text-black" : "text-white"}`,
+                                    className: `text-base lg:text-lg transition-colors hover:text-orange-500 ${isScrolled ? "text-black" : "text-white"}`,
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/Navigation.js",
-                                    lineNumber: 54,
-                                    columnNumber: 15
+                                    lineNumber: 81,
+                                    columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/Navigation.js",
-                            lineNumber: 37,
-                            columnNumber: 13
+                            lineNumber: 64,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "hidden md:block",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: handleDevisClick,
+                                className: `py-2 px-4 rounded-lg transition-all text-sm lg:text-base hover:bg-orange-600 ${isScrolled ? "bg-orange-500 text-white" : "bg-transparent border border-white text-white hover:bg-white/10"}`,
+                                children: "Réservez un devis !"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Navigation.js",
+                                lineNumber: 92,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/Navigation.js",
+                            lineNumber: 91,
+                            columnNumber: 11
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/components/Navigation.js",
-                        lineNumber: 36,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-[25%] flex justify-end",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: `py-2 px-4 rounded-lg transition ${isScrolled ? "bg-orange-500 text-white" : "bg-transparent border border-white text-white"}`,
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/components/Navigation.js",
+                    lineNumber: 41,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/app/components/Navigation.js",
+                lineNumber: 40,
+                columnNumber: 7
+            }, this),
+            isMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "md:hidden",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "px-4 pt-2 pb-3 space-y-1 bg-white shadow-lg",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/",
+                            onClick: handleLinkClick,
+                            className: "block px-3 py-2 text-base font-medium text-black hover:text-orange-500",
+                            children: "Accueil"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/Navigation.js",
+                            lineNumber: 109,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/services",
+                            onClick: handleLinkClick,
+                            className: "block px-3 py-2 text-base font-medium text-black hover:text-orange-500",
+                            children: "Services"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/Navigation.js",
+                            lineNumber: 116,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/contact",
+                            onClick: handleLinkClick,
+                            className: "block px-3 py-2 text-base font-medium text-black hover:text-orange-500",
+                            children: "Contact"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/Navigation.js",
+                            lineNumber: 123,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            onClick: handleDevisClick,
+                            className: "w-full mt-2 text-left px-3 py-2 text-base font-medium bg-orange-500 text-white rounded-lg hover:bg-orange-600",
                             children: "Réservez un devis !"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Navigation.js",
-                            lineNumber: 66,
+                            lineNumber: 130,
                             columnNumber: 13
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/components/Navigation.js",
-                        lineNumber: 65,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/components/Navigation.js",
+                    lineNumber: 108,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/app/components/Navigation.js",
-                lineNumber: 29,
+                lineNumber: 107,
                 columnNumber: 9
             }, this)
-        }, void 0, false, {
-            fileName: "[project]/src/app/components/Navigation.js",
-            lineNumber: 28,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/app/components/Navigation.js",
-        lineNumber: 21,
+        lineNumber: 33,
         columnNumber: 5
     }, this);
 };
-_s(Navigation, "zn45+zBm916nd+ZZBvFMOm5FR54=", false, function() {
+_s(Navigation, "L3cuY9OSDUhsT7cQOo4RxRXvVms=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$context$2f$ThemeContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$context$2f$ThemeContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];
 });
 _c = Navigation;
@@ -187,19 +280,22 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/styled-jsx/style.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+"use client";
+;
 ;
 ;
 ;
 ;
 const DiagonalSection = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "jsx-abb5f1ef1488727d" + " " + "relative w-full bg-white overflow-hidden",
+        className: "jsx-4a96c3452c36585d" + " " + "relative w-full bg-white overflow-hidden py-8 sm:py-12 lg:py-16",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-abb5f1ef1488727d" + " " + "max-w-7xl mx-auto",
+                className: "jsx-4a96c3452c36585d" + " " + "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                    className: "grid grid-cols-1 md:grid-cols-2 min-h-[600px]",
+                    className: "grid grid-cols-1 lg:grid-cols-2 min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] rounded-lg lg:rounded-xl overflow-hidden",
                     initial: {
                         opacity: 0,
                         x: -100
@@ -216,242 +312,256 @@ const DiagonalSection = ()=>{
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-abb5f1ef1488727d" + " " + "relative",
+                            className: "jsx-4a96c3452c36585d" + " " + "relative order-2 lg:order-1 min-h-[300px]",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "jsx-abb5f1ef1488727d" + " " + "absolute inset-0 clip-diagonal",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: "/ground.jpg",
-                                        alt: "Image décorative",
-                                        className: "jsx-abb5f1ef1488727d" + " " + "w-full h-full object-cover"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                        lineNumber: 19,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "jsx-abb5f1ef1488727d" + " " + "absolute inset-0 bg-black/20"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                        lineNumber: 25,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                className: "jsx-4a96c3452c36585d" + " " + "absolute inset-0 clip-diagonal-mobile lg:clip-diagonal",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "jsx-4a96c3452c36585d" + " " + "relative w-full h-full",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            src: "/ground.jpg",
+                                            alt: "Image décorative",
+                                            fill: true,
+                                            sizes: "(max-width: 1024px) 100vw, 50vw",
+                                            quality: 75,
+                                            priority: true,
+                                            style: {
+                                                objectFit: "cover"
+                                            },
+                                            className: "transition-transform duration-300 hover:scale-105"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                            lineNumber: 21,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-4a96c3452c36585d" + " " + "absolute inset-0 bg-black/20"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                            lineNumber: 33,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                    lineNumber: 20,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                lineNumber: 18,
+                                lineNumber: 19,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                            lineNumber: 17,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-abb5f1ef1488727d" + " " + "p-8 md:p-12 flex flex-col justify-center",
+                            className: "jsx-4a96c3452c36585d" + " " + "p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-1 lg:order-2 bg-gray-50 lg:bg-transparent",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "jsx-abb5f1ef1488727d" + " " + "text-3xl font-bold mb-6 text-black",
+                                    className: "jsx-4a96c3452c36585d" + " " + "text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-black",
                                     children: "Terres / Terres + Inertes"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                    lineNumber: 31,
+                                    lineNumber: 39,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-abb5f1ef1488727d" + " " + "space-y-4",
+                                    className: "jsx-4a96c3452c36585d" + " " + "space-y-4 sm:space-y-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-abb5f1ef1488727d",
+                                            className: "jsx-4a96c3452c36585d",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-xl font-semibold text-green-600 mb-2",
+                                                    className: "jsx-4a96c3452c36585d" + " " + "text-lg sm:text-xl font-semibold text-green-600 mb-2 sm:mb-3",
                                                     children: "À faire ✓"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                    lineNumber: 36,
+                                                    lineNumber: 44,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                    className: "jsx-abb5f1ef1488727d" + " " + "space-y-2",
+                                                    className: "jsx-4a96c3452c36585d" + " " + "space-y-2 sm:space-y-3",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
+                                                            className: "jsx-4a96c3452c36585d" + " " + "flex items-start text-black text-sm sm:text-base",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-green-500 mr-2 ",
-                                                                    children: "•"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                                    lineNumber: 41,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                "Utiliser max-w-7xl pour limiter la largeur"
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                            lineNumber: 40,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-green-500 mr-2",
-                                                                    children: "•"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                                    lineNumber: 45,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                "Ajouter mx-auto pour centrer"
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                            lineNumber: 44,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-green-500 mr-2",
+                                                                    className: "jsx-4a96c3452c36585d" + " " + "text-green-500 mr-2 text-lg",
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
                                                                     lineNumber: 49,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                "Prévoir un padding adaptatif"
+                                                                "à remplir par tonton ou charlie"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
                                                             lineNumber: 48,
                                                             columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                            className: "jsx-4a96c3452c36585d" + " " + "flex items-start text-black text-sm sm:text-base",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "jsx-4a96c3452c36585d" + " " + "text-green-500 mr-2 text-lg",
+                                                                    children: "•"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                                                    lineNumber: 53,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                "à remplir par tonton ou charlie"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                                            lineNumber: 52,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                            className: "jsx-4a96c3452c36585d" + " " + "flex items-start text-black text-sm sm:text-base",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "jsx-4a96c3452c36585d" + " " + "text-green-500 mr-2 text-lg",
+                                                                    children: "•"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                                                    lineNumber: 57,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                "à remplir par tonton ou charlie"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                                            lineNumber: 56,
+                                                            columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                    lineNumber: 39,
+                                                    lineNumber: 47,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                            lineNumber: 35,
+                                            lineNumber: 43,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-abb5f1ef1488727d",
+                                            className: "jsx-4a96c3452c36585d",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-xl font-semibold text-red-600 mb-2",
+                                                    className: "jsx-4a96c3452c36585d" + " " + "text-lg sm:text-xl font-semibold text-red-600 mb-2 sm:mb-3",
                                                     children: "À éviter ✗"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                    lineNumber: 56,
+                                                    lineNumber: 64,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                    className: "jsx-abb5f1ef1488727d" + " " + "space-y-2",
+                                                    className: "jsx-4a96c3452c36585d" + " " + "space-y-2 sm:space-y-3",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
+                                                            className: "jsx-4a96c3452c36585d" + " " + "flex items-start text-black text-sm sm:text-base",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-red-500 mr-2",
-                                                                    children: "•"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                                    lineNumber: 61,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                "Largeur fixe en pixels"
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                            lineNumber: 60,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-red-500 mr-2",
-                                                                    children: "•"
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                                    lineNumber: 65,
-                                                                    columnNumber: 21
-                                                                }, this),
-                                                                "Oublier le responsive"
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                            lineNumber: 64,
-                                                            columnNumber: 19
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-red-500 mr-2",
+                                                                    className: "jsx-4a96c3452c36585d" + " " + "text-red-500 mr-2 text-lg",
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
                                                                     lineNumber: 69,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                "Padding trop petit sur mobile"
+                                                                "à remplir par tonton ou charlie"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
                                                             lineNumber: 68,
                                                             columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                            className: "jsx-4a96c3452c36585d" + " " + "flex items-start text-black text-sm sm:text-base",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "jsx-4a96c3452c36585d" + " " + "text-red-500 mr-2 text-lg",
+                                                                    children: "•"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                                                    lineNumber: 73,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                "à remplir par tonton ou charlie"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                                            lineNumber: 72,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                            className: "jsx-4a96c3452c36585d" + " " + "flex items-start text-black text-sm sm:text-base",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "jsx-4a96c3452c36585d" + " " + "text-red-500 mr-2 text-lg",
+                                                                    children: "•"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                                                    lineNumber: 77,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                "à remplir par tonton ou charlie"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
+                                                            lineNumber: 76,
+                                                            columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                                    lineNumber: 59,
+                                                    lineNumber: 67,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                            lineNumber: 55,
+                                            lineNumber: 63,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                                    lineNumber: 34,
+                                    lineNumber: 42,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                            lineNumber: 30,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                    lineNumber: 9,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-                lineNumber: 8,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "abb5f1ef1488727d",
-                children: ".clip-diagonal.jsx-abb5f1ef1488727d{clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}"
+                id: "4a96c3452c36585d",
+                children: ".clip-diagonal{clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}.clip-diagonal-mobile{clip-path:polygon(0 0,100% 0,100% 85%,0 100%)}@media (width>=1024px){.clip-diagonal-mobile{clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/ServicesPage/GroundSection.js",
-        lineNumber: 6,
+        lineNumber: 9,
         columnNumber: 5
     }, this);
 };
@@ -472,8 +582,13 @@ __turbopack_esm__({
     "default": (()=>__TURBOPACK__default__export__)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/styled-jsx/style.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+"use client";
+;
+;
 ;
 ;
 ;
@@ -485,31 +600,31 @@ const GridFlexSections = ()=>{
             image: "/metalsFragment.jpg",
             content: {
                 toDo: [
-                    "Utiliser des images optimisées",
-                    "Maintenir un ratio d'aspect",
-                    "Adapter le contenu"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ],
                 toAvoid: [
-                    "Surcharger la section",
-                    "Négliger les espaces",
-                    "Oublier l'accessibilité"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ]
             }
         },
         {
             id: 2,
             title: "Déchêt verts",
-            image: "greenWaste.jpeg",
+            image: "/greenWaste.jpeg",
             content: {
                 toDo: [
-                    "Structurer le contenu clairement",
-                    "Utiliser des contrastes adaptés",
-                    "Prévoir des états de hover"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ],
                 toAvoid: [
-                    "Textes trop longs",
-                    "Couleurs non contrastées",
-                    "Éléments non cliquables"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ]
             }
         },
@@ -519,266 +634,281 @@ const GridFlexSections = ()=>{
             image: "/woodWaste.jpeg",
             content: {
                 toDo: [
-                    "Optimiser les performances",
-                    "Gérer les cas d'erreur",
-                    "Documenter le code"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ],
                 toAvoid: [
-                    "Code non maintenu",
-                    "Absence de tests",
-                    "Documentation obsolète"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ]
             }
         },
         {
             id: 4,
             title: "Inertes",
-            image: "brickFragment.jpeg",
+            image: "/brickFragment.jpeg",
             content: {
                 toDo: [
-                    "Prévoir le dark mode",
-                    "Implementer les animations",
-                    "Tester sur tous les navigateurs"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ],
                 toAvoid: [
-                    "Animations trop lourdes",
-                    "Oublier certains navigateurs",
-                    "Négliger la performance"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ]
             }
         },
         {
             id: 5,
             title: "Plâtres",
-            image: "platrePicture.jpg",
+            image: "/platrePicture.jpg",
             content: {
                 toDo: [
-                    "Prévoir le dark mode",
-                    "Implementer les animations",
-                    "Tester sur tous les navigateurs"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ],
                 toAvoid: [
-                    "Animations trop lourdes",
-                    "Oublier certains navigateurs",
-                    "Négliger la performance"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ]
             }
         },
         {
             id: 6,
             title: "Gyproc",
-            image: "gyprocPicture.jpg",
+            image: "/gyprocPicture.jpg",
             content: {
                 toDo: [
-                    "Prévoir le dark mode",
-                    "Implementer les animations",
-                    "Tester sur tous les navigateurs"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ],
                 toAvoid: [
-                    "Animations trop lourdes",
-                    "Oublier certains navigateurs",
-                    "Négliger la performance"
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie",
+                    "à remplir par tonton ou charlie"
                 ]
             }
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full bg-white py-12",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "max-w-7xl mx-auto px-4",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-1 md:grid-cols-2 gap-8",
-                children: sections.map((section, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                        initial: {
-                            opacity: 0
-                        },
-                        whileInView: {
-                            opacity: 1
-                        },
-                        transition: {
-                            duration: 0.8,
-                            delay: index * 0.3
-                        },
-                        viewport: {
-                            once: true
-                        },
-                        className: "bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl  transition-shadow duration-300 h-full",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `flex flex-col h-full ${index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`,
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative w-full md:w-1/2",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: `absolute inset-0 ${index % 2 === 0 ? "[clip-path:polygon(0_0,100%_0,85%_100%,0_100%)]" : "[clip-path:polygon(15%_0,100%_0,100%_100%,0_100%)]"}`,
+        className: "jsx-87cd3d7822ffaf2" + " " + "w-full bg-white py-8 sm:py-12 lg:py-16",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "jsx-87cd3d7822ffaf2" + " " + "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "jsx-87cd3d7822ffaf2" + " " + "grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8",
+                    children: sections.map((section, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                            initial: {
+                                opacity: 0,
+                                y: 20
+                            },
+                            whileInView: {
+                                opacity: 1,
+                                y: 0
+                            },
+                            transition: {
+                                duration: 0.8,
+                                delay: index * 0.2
+                            },
+                            viewport: {
+                                once: true,
+                                margin: "-50px"
+                            },
+                            className: "bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-md hover:shadow-xl  transition-all duration-300 h-full",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "jsx-87cd3d7822ffaf2" + " " + `flex flex-col h-full ${index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"}`,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "jsx-87cd3d7822ffaf2" + " " + "relative w-full lg:w-1/2",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-87cd3d7822ffaf2" + " " + `relative w-full h-full ${index % 2 === 0 ? "clip-path-left" : "clip-path-right"}`,
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                                    src: section.image,
-                                                    alt: `Image ${section.title}`,
-                                                    className: "w-full h-full object-cover"
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "jsx-87cd3d7822ffaf2" + " " + "aspect-w-16 aspect-h-9 lg:aspect-h-12",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        src: section.image,
+                                                        alt: `Illustration ${section.title}`,
+                                                        fill: true,
+                                                        sizes: "(max-width: 1024px) 100vw, 50vw",
+                                                        quality: 75,
+                                                        priority: index < 2,
+                                                        className: "object-cover",
+                                                        placeholder: "blur",
+                                                        blurDataURL: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRseHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/2wBDARAVFRUZFRkbHRodKiImKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKir/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                        lineNumber: 142,
+                                                        columnNumber: 23
+                                                    }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
                                                     lineNumber: 141,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute inset-0 bg-black/20"
+                                                    className: "jsx-87cd3d7822ffaf2" + " " + "absolute inset-0 bg-gradient-to-b from-black/30 to-black/10"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                    lineNumber: 146,
+                                                    lineNumber: 154,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                            lineNumber: 134,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "pb-[66.67%]"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                            lineNumber: 149,
+                                            lineNumber: 136,
                                             columnNumber: 19
                                         }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                    lineNumber: 133,
-                                    columnNumber: 17
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full md:w-1/2 p-6 flex flex-col justify-center",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            className: "text-xl font-bold mb-4 text-black",
-                                            children: section.title
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                            lineNumber: 154,
-                                            columnNumber: 19
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "space-y-4",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                            className: "text-lg font-semibold text-green-600 mb-2",
-                                                            children: "À faire ✓"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                            lineNumber: 160,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                            className: "space-y-1",
-                                                            children: section.content.toDo.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                    className: "flex items-start text-black",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "text-green-500 mr-2 ",
-                                                                            children: "•"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                                            lineNumber: 166,
-                                                                            columnNumber: 29
-                                                                        }, this),
-                                                                        item
-                                                                    ]
-                                                                }, idx, true, {
-                                                                    fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                                    lineNumber: 165,
-                                                                    columnNumber: 27
-                                                                }, this))
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                            lineNumber: 163,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                    lineNumber: 159,
-                                                    columnNumber: 21
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                            className: "text-lg font-semibold text-red-600 mb-2",
-                                                            children: "À éviter ✗"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                            lineNumber: 174,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                            className: "space-y-1",
-                                                            children: section.content.toAvoid.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                                    className: "flex items-start text-black",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                            className: "text-red-500 mr-2",
-                                                                            children: "•"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                                            lineNumber: 180,
-                                                                            columnNumber: 29
-                                                                        }, this),
-                                                                        item
-                                                                    ]
-                                                                }, idx, true, {
-                                                                    fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                                    lineNumber: 179,
-                                                                    columnNumber: 27
-                                                                }, this))
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                            lineNumber: 177,
-                                                            columnNumber: 23
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                                    lineNumber: 173,
-                                                    columnNumber: 21
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                            lineNumber: 158,
-                                            columnNumber: 19
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                                    lineNumber: 153,
-                                    columnNumber: 17
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                        lineNumber: 135,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "jsx-87cd3d7822ffaf2" + " " + "w-full lg:w-1/2 p-4 sm:p-6 flex flex-col justify-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                className: "jsx-87cd3d7822ffaf2" + " " + "text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-black",
+                                                children: section.title
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                lineNumber: 159,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "jsx-87cd3d7822ffaf2" + " " + "space-y-3 sm:space-y-4",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "jsx-87cd3d7822ffaf2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                                className: "jsx-87cd3d7822ffaf2" + " " + "text-base sm:text-lg font-semibold text-green-600 mb-2",
+                                                                children: "À faire ✓"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                                lineNumber: 165,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                                                className: "jsx-87cd3d7822ffaf2" + " " + "space-y-1.5",
+                                                                children: section.content.toDo.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "jsx-87cd3d7822ffaf2" + " " + "flex items-start text-sm sm:text-base text-gray-800",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                className: "jsx-87cd3d7822ffaf2" + " " + "text-green-500 mr-2 text-base",
+                                                                                children: "•"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                                                lineNumber: 174,
+                                                                                columnNumber: 29
+                                                                            }, this),
+                                                                            item
+                                                                        ]
+                                                                    }, idx, true, {
+                                                                        fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                                        lineNumber: 170,
+                                                                        columnNumber: 27
+                                                                    }, this))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                                lineNumber: 168,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                        lineNumber: 164,
+                                                        columnNumber: 21
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "jsx-87cd3d7822ffaf2",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                                className: "jsx-87cd3d7822ffaf2" + " " + "text-base sm:text-lg font-semibold text-red-600 mb-2",
+                                                                children: "À éviter ✗"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                                lineNumber: 184,
+                                                                columnNumber: 23
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                                                className: "jsx-87cd3d7822ffaf2" + " " + "space-y-1.5",
+                                                                children: section.content.toAvoid.map((item, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                                        className: "jsx-87cd3d7822ffaf2" + " " + "flex items-start text-sm sm:text-base text-gray-800",
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                className: "jsx-87cd3d7822ffaf2" + " " + "text-red-500 mr-2 text-base",
+                                                                                children: "•"
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                                                lineNumber: 193,
+                                                                                columnNumber: 29
+                                                                            }, this),
+                                                                            item
+                                                                        ]
+                                                                    }, idx, true, {
+                                                                        fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                                        lineNumber: 189,
+                                                                        columnNumber: 27
+                                                                    }, this))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                                lineNumber: 187,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                        lineNumber: 183,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                                lineNumber: 163,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                        lineNumber: 158,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                                lineNumber: 130,
+                                columnNumber: 15
+                            }, this)
+                        }, section.id, false, {
                             fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                            lineNumber: 127,
-                            columnNumber: 15
-                        }, this)
-                    }, section.id, false, {
-                        fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                        lineNumber: 115,
-                        columnNumber: 13
-                    }, this))
+                            lineNumber: 118,
+                            columnNumber: 13
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
+                    lineNumber: 116,
+                    columnNumber: 9
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-                lineNumber: 113,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-            lineNumber: 112,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
+                lineNumber: 115,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                id: "87cd3d7822ffaf2",
+                children: ".clip-path-left.jsx-87cd3d7822ffaf2,.clip-path-right.jsx-87cd3d7822ffaf2{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}@media (width>=1024px){.clip-path-left.jsx-87cd3d7822ffaf2{clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}.clip-path-right.jsx-87cd3d7822ffaf2{clip-path:polygon(15% 0,100% 0,100% 100%,0 100%)}}"
+            }, void 0, false, void 0, this)
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/app/components/ServicesPage/GridSection.js",
-        lineNumber: 111,
+        lineNumber: 114,
         columnNumber: 5
     }, this);
 };
@@ -801,17 +931,20 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/styled-jsx/style.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+"use client";
+;
 ;
 ;
 ;
 ;
 const OtherSection = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "jsx-abb5f1ef1488727d" + " " + "relative w-full bg-white overflow-hidden",
+        className: "jsx-ee9b07c60f63abbf" + " " + "relative w-full bg-white overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-abb5f1ef1488727d" + " " + "max-w-7xl mx-auto",
+                className: "jsx-ee9b07c60f63abbf" + " " + "max-w-7xl mx-auto",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                     className: "grid grid-cols-1 md:grid-cols-2 min-h-[600px]",
                     initial: {
@@ -830,242 +963,256 @@ const OtherSection = ()=>{
                     },
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-abb5f1ef1488727d" + " " + "relative md:order-last",
+                            className: "jsx-ee9b07c60f63abbf" + " " + "relative md:order-last h-[400px] md:h-full",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "jsx-abb5f1ef1488727d" + " " + "absolute inset-0 clip-diagonal ",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                        src: "/miscellanousWaste.jpg",
-                                        alt: "Image décorative",
-                                        className: "jsx-abb5f1ef1488727d" + " " + "w-full h-full object-cover"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                        lineNumber: 18,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "jsx-abb5f1ef1488727d" + " " + "absolute inset-0 bg-black/20"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                        lineNumber: 24,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                className: "jsx-ee9b07c60f63abbf" + " " + "absolute inset-0 clip-diagonal",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "jsx-ee9b07c60f63abbf" + " " + "relative w-full h-full",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            src: "/miscellanousWaste.jpg",
+                                            alt: "Image décorative",
+                                            fill: true,
+                                            sizes: "(max-width: 768px) 100vw, 50vw",
+                                            quality: 75,
+                                            priority: true,
+                                            style: {
+                                                objectFit: "cover"
+                                            },
+                                            className: "transition-transform duration-300 hover:scale-105"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
+                                            lineNumber: 21,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "jsx-ee9b07c60f63abbf" + " " + "absolute inset-0 bg-black/20"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
+                                            lineNumber: 33,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
+                                    lineNumber: 20,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                lineNumber: 17,
+                                lineNumber: 19,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                            lineNumber: 16,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-abb5f1ef1488727d" + " " + "p-8 md:p-12 flex flex-col justify-center",
+                            className: "jsx-ee9b07c60f63abbf" + " " + "p-8 md:p-12 flex flex-col justify-center bg-white",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "jsx-abb5f1ef1488727d" + " " + "text-3xl font-bold mb-6 text-black",
+                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-3xl font-bold mb-6 text-black",
                                     children: "Tout venant"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                    lineNumber: 30,
+                                    lineNumber: 39,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-abb5f1ef1488727d" + " " + "space-y-4",
+                                    className: "jsx-ee9b07c60f63abbf" + " " + "space-y-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-abb5f1ef1488727d",
+                                            className: "jsx-ee9b07c60f63abbf",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-xl font-semibold text-green-600 mb-2",
+                                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-xl font-semibold text-green-600 mb-2",
                                                     children: "À faire ✓"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                    lineNumber: 33,
+                                                    lineNumber: 42,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                    className: "jsx-abb5f1ef1488727d" + " " + "space-y-2",
+                                                    className: "jsx-ee9b07c60f63abbf" + " " + "space-y-2",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
+                                                            className: "jsx-ee9b07c60f63abbf" + " " + "flex items-start text-black",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-green-500 mr-2",
+                                                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-green-500 mr-2",
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                                    lineNumber: 38,
+                                                                    lineNumber: 47,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                "Utiliser max-w-7xl pour limiter la largeur"
+                                                                "à remplir par tonton ou charlie"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                            lineNumber: 37,
+                                                            lineNumber: 46,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
+                                                            className: "jsx-ee9b07c60f63abbf" + " " + "flex items-start text-black",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-green-500 mr-2",
+                                                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-green-500 mr-2",
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                                    lineNumber: 42,
+                                                                    lineNumber: 51,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                "Ajouter mx-auto pour centrer"
+                                                                "à remplir par tonton ou charlie"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                            lineNumber: 41,
+                                                            lineNumber: 50,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
+                                                            className: "jsx-ee9b07c60f63abbf" + " " + "flex items-start text-black",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-green-500 mr-2",
+                                                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-green-500 mr-2",
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                                    lineNumber: 46,
+                                                                    lineNumber: 55,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                "Prévoir un padding adaptatif"
+                                                                "à remplir par tonton ou charlie"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                            lineNumber: 45,
+                                                            lineNumber: 54,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                    lineNumber: 36,
+                                                    lineNumber: 45,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                            lineNumber: 32,
+                                            lineNumber: 41,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-abb5f1ef1488727d",
+                                            className: "jsx-ee9b07c60f63abbf",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-xl font-semibold text-red-600 mb-2",
+                                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-xl font-semibold text-red-600 mb-2",
                                                     children: "À éviter ✗"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                    lineNumber: 53,
+                                                    lineNumber: 62,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                    className: "jsx-abb5f1ef1488727d" + " " + "space-y-2",
+                                                    className: "jsx-ee9b07c60f63abbf" + " " + "space-y-2",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
+                                                            className: "jsx-ee9b07c60f63abbf" + " " + "flex items-start text-black",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-red-500 mr-2",
+                                                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-red-500 mr-2",
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                                    lineNumber: 58,
+                                                                    lineNumber: 67,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                "Largeur fixe en pixels"
+                                                                "à remplir par tonton ou charlie"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                            lineNumber: 57,
+                                                            lineNumber: 66,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
+                                                            className: "jsx-ee9b07c60f63abbf" + " " + "flex items-start text-black",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-red-500 mr-2",
+                                                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-red-500 mr-2",
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                                    lineNumber: 62,
+                                                                    lineNumber: 71,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                "Oublier le responsive"
+                                                                "à remplir par tonton ou charlie"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                            lineNumber: 61,
+                                                            lineNumber: 70,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                            className: "jsx-abb5f1ef1488727d" + " " + "flex items-start text-black",
+                                                            className: "jsx-ee9b07c60f63abbf" + " " + "flex items-start text-black",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "jsx-abb5f1ef1488727d" + " " + "text-red-500 mr-2",
+                                                                    className: "jsx-ee9b07c60f63abbf" + " " + "text-red-500 mr-2",
                                                                     children: "•"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                                    lineNumber: 66,
+                                                                    lineNumber: 75,
                                                                     columnNumber: 21
                                                                 }, this),
-                                                                "Padding trop petit sur mobile"
+                                                                "à remplir par tonton ou charlie"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                            lineNumber: 65,
+                                                            lineNumber: 74,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                                    lineNumber: 56,
+                                                    lineNumber: 65,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                            lineNumber: 52,
+                                            lineNumber: 61,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                                    lineNumber: 31,
+                                    lineNumber: 40,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                            lineNumber: 29,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                    lineNumber: 8,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-                lineNumber: 7,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                id: "abb5f1ef1488727d",
-                children: ".clip-diagonal.jsx-abb5f1ef1488727d{clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}"
+                id: "ee9b07c60f63abbf",
+                children: ".clip-diagonal{clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}@media (width<=768px){.clip-diagonal{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/ServicesPage/MiscellanousSection.js",
-        lineNumber: 5,
+        lineNumber: 9,
         columnNumber: 5
     }, this);
 };
@@ -1087,13 +1234,17 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
+;
+var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
 ;
 const ContactSection = ()=>{
-    // Variants pour le conteneur principal
+    _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const containerVariants = {
         hidden: {
             opacity: 0,
@@ -1109,7 +1260,6 @@ const ContactSection = ()=>{
             }
         }
     };
-    // Variants pour les éléments enfants
     const itemVariants = {
         hidden: {
             opacity: 0,
@@ -1120,7 +1270,6 @@ const ContactSection = ()=>{
             y: 0
         }
     };
-    // Variants pour les lignes décoratives
     const lineVariants = {
         hidden: {
             scaleX: 0,
@@ -1135,10 +1284,13 @@ const ContactSection = ()=>{
             }
         }
     };
+    const handleDevisClick = ()=>{
+        router.push("/contact");
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative -mb-20 z-10",
+        className: "relative -mb-16 sm:-mb-20 z-10",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-            className: "relative overflow-hidden rounded-3xl mx-4 lg:mx-8",
+            className: "relative overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl  mx-3 sm:mx-4 lg:mx-8",
             variants: containerVariants,
             initial: "hidden",
             whileInView: "visible",
@@ -1162,34 +1314,34 @@ const ContactSection = ()=>{
                     }
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                    lineNumber: 60,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "relative py-14 px-4",
+                    className: "relative py-8 sm:py-12 lg:py-14 px-4 sm:px-6 lg:px-8",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "max-w-7xl mx-auto text-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h2, {
-                                className: "text-4xl md:text-5xl font-bold text-white mb-6",
+                                className: "text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-bold text-white mb-4 sm:mb-6",
                                 variants: itemVariants,
                                 children: "Une question sur nos services ?"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                                lineNumber: 70,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
-                                className: "text-blue-100 text-lg mb-12 max-w-2xl mx-auto",
-                                variants: itemVariants,
-                                children: "Notre équipe d'experts est là pour vous conseiller sur le choix de votre container et répondre à toutes vos questions."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Homepage/ContactSection.js",
                                 lineNumber: 77,
                                 columnNumber: 13
                             }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
+                                className: "text-blue-100 text-base sm:text-lg mb-8 sm:mb-10 lg:mb-12  max-w-xl sm:max-w-2xl mx-auto px-2 sm:px-0",
+                                variants: itemVariants,
+                                children: "Notre équipe d'experts est là pour vous conseiller sur le choix de votre container et répondre à toutes vos questions."
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/Homepage/ContactSection.js",
+                                lineNumber: 85,
+                                columnNumber: 13
+                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                                className: "bg-white text-orange-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors mb-16",
+                                className: "bg-white text-orange-600 px-6 sm:px-8 py-2.5 sm:py-3  rounded-lg font-medium text-sm sm:text-base hover:bg-blue-50 transition-colors  mb-8 sm:mb-12 lg:mb-16 w-full sm:w-auto",
                                 variants: itemVariants,
                                 whileHover: {
                                     scale: 1.05
@@ -1197,79 +1349,85 @@ const ContactSection = ()=>{
                                 whileTap: {
                                     scale: 0.95
                                 },
+                                onClick: handleDevisClick,
                                 children: "Contactez-nous"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                                lineNumber: 85,
+                                lineNumber: 94,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                        lineNumber: 69,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                    lineNumber: 68,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "absolute inset-0 opacity-10",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute top-1/4 left-0 w-full h-px bg-white transform -rotate-6"
+                            className: "absolute top-1/4 left-0 w-full h-px bg-white transform -rotate-3 sm:-rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 97,
+                            lineNumber: 112,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute top-1/3 left-0 w-full h-px bg-white transform rotate-6"
+                            className: "absolute top-1/3 left-0 w-full h-px bg-white transform rotate-3 sm:rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 98,
+                            lineNumber: 113,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute top-1/2 left-0 w-full h-px bg-white transform rotate-6"
+                            className: "absolute top-1/2 left-0 w-full h-px bg-white transform rotate-3 sm:rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 99,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute top-1/4 left-0 w-full h-px bg-white transform rotate-6"
+                            className: "absolute top-2/3 left-0 w-full h-px bg-white transform -rotate-3 sm:-rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 100,
+                            lineNumber: 115,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute top-1/3 left-0 w-full h-px bg-white transform rotate-6"
+                            className: "absolute top-3/4 left-0 w-full h-px bg-white transform rotate-3 sm:rotate-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                            lineNumber: 101,
+                            lineNumber: 116,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-                    lineNumber: 96,
+                    lineNumber: 111,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-            lineNumber: 53,
+            lineNumber: 57,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/components/Homepage/ContactSection.js",
-        lineNumber: 52,
+        lineNumber: 56,
         columnNumber: 5
     }, this);
 };
+_s(ContactSection, "fN7XvhJ+p5oE6+Xlo0NJmXpxjC8=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
 _c = ContactSection;
 const __TURBOPACK__default__export__ = ContactSection;
 var _c;
@@ -1354,7 +1512,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#",
+                                                href: "/services",
                                                 className: "text-gray-400 hover:text-white transition-colors",
                                                 children: "Services"
                                             }, void 0, false, {
@@ -1369,7 +1527,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "#",
+                                                href: "contact",
                                                 className: "text-gray-400 hover:text-white transition-colors",
                                                 children: "Contact"
                                             }, void 0, false, {
@@ -1409,7 +1567,7 @@ const Footer = ()=>{
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             className: "text-gray-400",
-                                            children: "01 23 45 67 89"
+                                            children: "+32 477 61 55 52"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Homepage/Footer.js",
                                             lineNumber: 54,
@@ -1417,7 +1575,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             className: "text-gray-400",
-                                            children: "contact@rolandcontainer.fr"
+                                            children: "rolandcontainer@hotmail.com"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Homepage/Footer.js",
                                             lineNumber: 55,
@@ -1425,7 +1583,7 @@ const Footer = ()=>{
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             className: "text-gray-400",
-                                            children: "123 Rue du Container, 75000 Paris"
+                                            children: "Chau. du Château Mondron 56, 6040 Jumet"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/components/Homepage/Footer.js",
                                             lineNumber: 56,
@@ -1530,7 +1688,7 @@ __turbopack_esm__({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)"); // Import de useRouter
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 ;
@@ -1542,53 +1700,67 @@ const ContainerAssistantModal = ({ isOpen, onClose })=>{
     _s();
     const [step, setStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const [answers, setAnswers] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
-    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])(); // Initialisation du router
-    const handleRedirect = ()=>{
-        router.push("/contact");
-    };
-    // Questions du quiz
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const questions = [
         {
-            question: "Quel type de déchets avez-vous ?",
+            question: "Type de déchets ?",
             options: [
-                "Gravats",
+                "Eternit",
+                "Déchets verts",
                 "Bois",
-                "Plastique",
-                "Mélange"
+                "Inertes",
+                "Plâtres",
+                "Gyproc",
+                "Terres",
+                "Tout venant"
             ],
             key: "type"
         },
         {
-            question: "Quelle est la quantité approximative ?",
+            question: "Quantité estimée ?",
             options: [
-                "1-2m³",
-                "5m³",
-                "10m³",
-                "Plus de 15m³"
+                "Petit volume (1-5m³)",
+                "Moyen volume (5-10m³)",
+                "Grand volume (10-20m³)",
+                "Très grand volume (20m³+)"
             ],
             key: "volume"
-        },
-        {
-            question: "Avez-vous des objets lourds ou encombrants ?",
-            options: [
-                "Oui",
-                "Non"
-            ],
-            key: "encombrant"
         }
     ];
-    // Fonction pour déterminer la recommandation
+    const getContainerSpecs = (type, volume)=>{
+        let containerSize;
+        switch(volume){
+            case "Petit volume (1-5m³)":
+                containerSize = "5m³";
+                break;
+            case "Moyen volume (5-10m³)":
+                containerSize = "10m³";
+                break;
+            case "Grand volume (10-20m³)":
+                containerSize = "20m³";
+                break;
+            case "Très grand volume (20m³+)":
+                containerSize = "30m³";
+                break;
+            default:
+                containerSize = "10m³";
+        }
+        return {
+            container: `Container ${containerSize}`,
+            category: type,
+            weightLimit: "Poids selon type",
+            details: "Conteneur adapté à vos besoins"
+        };
+    };
     const getRecommendation = ()=>{
-        if (answers.type === "Gravats" && answers.volume === "1-2m³") {
-            return "Container 6m³ pour Gravats";
-        }
-        if (answers.volume === "Plus de 15m³") {
-            return "Container 30m³ pour Déchets volumineux";
-        }
-        if (answers.encombrant === "Oui") {
-            return "Container 20m³ avec grande ouverture";
-        }
-        return "Container standard 10m³";
+        const { type, volume } = answers;
+        if (!type || !volume) return {
+            container: "Container standard",
+            category: "À déterminer",
+            weightLimit: "À déterminer",
+            details: "Nous vous conseillons sur place"
+        };
+        return getContainerSpecs(type, volume);
     };
     const handleAnswer = (option)=>{
         setAnswers({
@@ -1598,12 +1770,12 @@ const ContainerAssistantModal = ({ isOpen, onClose })=>{
         if (step < questions.length - 1) {
             setStep(step + 1);
         } else {
-            setStep(questions.length); // Affiche la recommandation
+            setStep(questions.length);
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
         children: isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-            className: "fixed inset-0 bg-black/50 flex justify-center items-center z-50",
+            className: "fixed inset-0 bg-black/50 flex justify-center items-center z-50 p-4",
             initial: {
                 opacity: 0
             },
@@ -1614,91 +1786,128 @@ const ContainerAssistantModal = ({ isOpen, onClose })=>{
                 opacity: 0
             },
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                className: "bg-white p-6 rounded-lg shadow-lg max-w-md w-full",
+                className: "bg-white rounded-lg shadow-xl max-w-md w-full",
                 initial: {
-                    scale: 0.8
+                    scale: 0.9
                 },
                 animate: {
                     scale: 1
                 },
                 exit: {
-                    scale: 0.8
+                    scale: 0.9
                 },
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-xl font-bold mb-4",
-                        children: step < questions.length ? questions[step].question : "Votre container recommandé"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-                        lineNumber: 72,
-                        columnNumber: 13
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "space-y-4",
-                        children: step < questions.length ? questions[step].options.map((option, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: "w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition",
-                                onClick: ()=>handleAnswer(option),
-                                children: option
-                            }, index, false, {
-                                fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-                                lineNumber: 81,
-                                columnNumber: 19
-                            }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-lg font-semibold text-green-600 mb-4",
-                                    children: [
-                                        "🎉 ",
-                                        getRecommendation()
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-                                    lineNumber: 91,
-                                    columnNumber: 19
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition mb-4",
-                                    onClick: onClose,
-                                    children: "Fermer"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-                                    lineNumber: 94,
-                                    columnNumber: 19
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "w-full py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400 transition",
-                                    onClick: handleRedirect,
-                                    children: "Réserver un devis"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-                                    lineNumber: 100,
-                                    columnNumber: 19
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "p-6",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-xl font-bold mb-6",
+                            children: step < questions.length ? questions[step].question : "Notre recommandation"
+                        }, void 0, false, {
                             fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-                            lineNumber: 90,
-                            columnNumber: 17
+                            lineNumber: 102,
+                            columnNumber: 15
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "space-y-3",
+                            children: step < questions.length ? questions[step].options.map((option, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    className: "w-full p-3 bg-white border-2 border-blue-500 text-blue-500  rounded-lg hover:bg-blue-50 transition",
+                                    onClick: ()=>handleAnswer(option),
+                                    children: option
+                                }, index, false, {
+                                    fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                    lineNumber: 111,
+                                    columnNumber: 21
+                                }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "bg-green-50 p-4 rounded-lg mb-4 space-y-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: "text-lg font-bold text-green-700",
+                                                children: getRecommendation().container
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                                lineNumber: 123,
+                                                columnNumber: 23
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "space-y-2 text-green-600",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "font-semibold",
+                                                            children: "Catégorie : "
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                                            lineNumber: 128,
+                                                            columnNumber: 27
+                                                        }, this),
+                                                        getRecommendation().category
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                                    lineNumber: 127,
+                                                    columnNumber: 25
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                                lineNumber: 126,
+                                                columnNumber: 23
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                        lineNumber: 122,
+                                        columnNumber: 21
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: "w-full p-3 bg-green-500 text-white rounded-lg  hover:bg-green-600 transition mb-3",
+                                        onClick: ()=>router.push("/contact"),
+                                        children: "Demander un devis"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                        lineNumber: 134,
+                                        columnNumber: 21
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: "w-full p-3 bg-gray-200 text-gray-700 rounded-lg  hover:bg-gray-300 transition",
+                                        onClick: onClose,
+                                        children: "Fermer"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                        lineNumber: 142,
+                                        columnNumber: 21
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                                lineNumber: 121,
+                                columnNumber: 19
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                            lineNumber: 108,
+                            columnNumber: 15
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-                        lineNumber: 78,
-                        columnNumber: 13
-                    }, this)
-                ]
-            }, void 0, true, {
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/app/components/ContainerAssistantModal.js",
+                    lineNumber: 101,
+                    columnNumber: 13
+                }, this)
+            }, void 0, false, {
                 fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-                lineNumber: 66,
+                lineNumber: 95,
                 columnNumber: 11
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-            lineNumber: 60,
+            lineNumber: 89,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/components/ContainerAssistantModal.js",
-        lineNumber: 58,
+        lineNumber: 87,
         columnNumber: 5
     }, this);
 };
@@ -1726,6 +1935,7 @@ __turbopack_esm__({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$ContainerAssistantModal$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/app/components/ContainerAssistantModal.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$arrow$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDownCircle$3e$__ = __turbopack_import__("[project]/node_modules/lucide-react/dist/esm/icons/circle-arrow-down.js [app-client] (ecmascript) <export default as ArrowDownCircle>");
 ;
@@ -1734,10 +1944,11 @@ var _s = __turbopack_refresh__.signature();
 ;
 ;
 ;
+;
 const HeroSection = ()=>{
     _s();
     const [isModalOpen, setModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    // Variants pour les animations de texte
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const textVariants = {
         hidden: {
             opacity: 0,
@@ -1748,7 +1959,6 @@ const HeroSection = ()=>{
             y: 0
         }
     };
-    // Variants pour les containers
     const containerVariants = {
         hidden: {
             opacity: 0,
@@ -1758,6 +1968,9 @@ const HeroSection = ()=>{
             opacity: 1,
             scale: 1
         }
+    };
+    const handleDevisClick = ()=>{
+        router.push("/contact");
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "relative min-h-screen overflow-hidden",
@@ -1780,7 +1993,7 @@ const HeroSection = ()=>{
                         className: "w-full h-full object-cover"
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                        lineNumber: 42,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1796,198 +2009,264 @@ const HeroSection = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                        lineNumber: 47,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                lineNumber: 36,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "relative z-10 min-h-screen",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-screen grid grid-cols-2",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col justify-center h-full max-w-xl pt-20",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h1, {
-                                    className: "text-5xl font-bold text-white mb-6",
-                                    variants: textVariants,
-                                    initial: "hidden",
-                                    animate: "visible",
-                                    transition: {
-                                        duration: 0.6
-                                    },
-                                    children: [
-                                        "Trouvez le container",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                            lineNumber: 67,
-                                            columnNumber: 15
-                                        }, this),
-                                        "idéal pour votre",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                            lineNumber: 69,
-                                            columnNumber: 15
-                                        }, this),
-                                        "stockage"
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                    lineNumber: 59,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
-                                    className: "text-xl text-gray-300 mb-12",
-                                    variants: textVariants,
-                                    initial: "hidden",
-                                    animate: "visible",
-                                    transition: {
-                                        duration: 0.6,
-                                        delay: 0.2
-                                    },
-                                    children: "Découvrez notre gamme complète de containers pour le stockage de vos biens. Des solutions adaptées à tous vos besoins, de 6m³ à 30m³."
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                    lineNumber: 73,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    className: "flex justify-start items-center gap-4",
-                                    variants: textVariants,
-                                    initial: "hidden",
-                                    animate: "visible",
-                                    transition: {
-                                        duration: 0.6,
-                                        delay: 0.4
-                                    },
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                                            className: "inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium  rounded-lg hover:bg-blue-700 transition-all duration-300 w-fit",
-                                            whileHover: {
-                                                scale: 1.05
-                                            },
-                                            whileTap: {
-                                                scale: 0.95
-                                            },
-                                            onClick: ()=>setModalOpen(true),
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$arrow$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDownCircle$3e$__["ArrowDownCircle"], {
-                                                    className: "w-6 h-6 mr-2"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                                    lineNumber: 99,
-                                                    columnNumber: 17
-                                                }, this),
-                                                "Lancer le questionnaire"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                            lineNumber: 92,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
-                                            className: "bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300",
-                                            whileHover: {
-                                                scale: 1.05
-                                            },
-                                            whileTap: {
-                                                scale: 0.95
-                                            },
-                                            children: "Réservez un devis"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                            lineNumber: 102,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                    lineNumber: 85,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                            lineNumber: 58,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "relative flex items-center",
-                            children: [
-                                {
-                                    size: "6m³",
-                                    position: "left-4 top-[30%]",
-                                    delay: 0.2
-                                },
-                                {
-                                    size: "12m³",
-                                    position: "right-4 top-[40%]",
-                                    delay: 0.4
-                                },
-                                {
-                                    size: "20m³",
-                                    position: "left-4 top-[60%]",
-                                    delay: 0.6
-                                },
-                                {
-                                    size: "30m³",
-                                    position: "right-4 top-[70%]",
-                                    delay: 0.8
-                                }
-                            ].map((container, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    className: `absolute ${container.position}`,
-                                    variants: containerVariants,
-                                    initial: "hidden",
-                                    animate: "visible",
-                                    transition: {
-                                        duration: 0.6,
-                                        delay: container.delay,
-                                        type: "spring",
-                                        stiffness: 100
-                                    },
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                        className: "bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl hover:bg-white/20 transition-all duration-300 cursor-pointer hover:border-blue-500 shadow-lg",
-                                        whileHover: {
-                                            scale: 1.1,
-                                            backgroundColor: "rgba(255, 255, 255, 0.2)"
+                    className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-screen",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-1 lg:grid-cols-2 h-full gap-8",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-col justify-center h-full max-w-xl pt-20 lg:pt-0",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h1, {
+                                        className: "text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6",
+                                        variants: textVariants,
+                                        initial: "hidden",
+                                        animate: "visible",
+                                        transition: {
+                                            duration: 0.6
                                         },
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-3xl font-semibold text-white",
-                                            children: container.size
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                            lineNumber: 141,
-                                            columnNumber: 19
-                                        }, this)
+                                        children: [
+                                            "Trouvez le container",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                                lineNumber: 70,
+                                                columnNumber: 17
+                                            }, this),
+                                            "idéal pour votre",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                                lineNumber: 72,
+                                                columnNumber: 17
+                                            }, this),
+                                            "stockage"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                        lineNumber: 62,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].p, {
+                                        className: "text-base sm:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-12",
+                                        variants: textVariants,
+                                        initial: "hidden",
+                                        animate: "visible",
+                                        transition: {
+                                            duration: 0.6,
+                                            delay: 0.2
+                                        },
+                                        children: "Découvrez notre gamme complète de containers pour le stockage de vos biens. Des solutions adaptées à tous vos besoins, de 6m³ à 30m³."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                        lineNumber: 133,
-                                        columnNumber: 17
+                                        lineNumber: 76,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                        className: "flex flex-col sm:flex-row justify-start items-center gap-4",
+                                        variants: textVariants,
+                                        initial: "hidden",
+                                        animate: "visible",
+                                        transition: {
+                                            duration: 0.6,
+                                            delay: 0.4
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
+                                                className: "inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium  rounded-lg hover:bg-blue-700 transition-all duration-300 w-full sm:w-fit text-sm sm:text-base",
+                                                whileHover: {
+                                                    scale: 1.05
+                                                },
+                                                whileTap: {
+                                                    scale: 0.95
+                                                },
+                                                onClick: ()=>setModalOpen(true),
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$arrow$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDownCircle$3e$__["ArrowDownCircle"], {
+                                                        className: "w-5 h-5 sm:w-6 sm:h-6 mr-2"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                                        lineNumber: 103,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    "Lancer le questionnaire"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                                lineNumber: 95,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
+                                                className: "bg-orange-500 px-4 py-2 rounded-lg hover:bg-orange-600  transition-colors duration-300 w-full sm:w-fit text-white text-sm sm:text-base",
+                                                whileHover: {
+                                                    scale: 1.05
+                                                },
+                                                whileTap: {
+                                                    scale: 0.95
+                                                },
+                                                onClick: handleDevisClick,
+                                                children: "Réservez un devis"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                                lineNumber: 106,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                        lineNumber: 88,
+                                        columnNumber: 15
                                     }, this)
-                                }, index, false, {
-                                    fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                                    lineNumber: 120,
-                                    columnNumber: 15
-                                }, this))
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                            lineNumber: 113,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                lineNumber: 61,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "relative hidden lg:flex items-center",
+                                children: [
+                                    {
+                                        size: "6m³",
+                                        position: "left-4 top-[30%]",
+                                        delay: 0.2
+                                    },
+                                    {
+                                        size: "12m³",
+                                        position: "right-4 top-[40%]",
+                                        delay: 0.4
+                                    },
+                                    {
+                                        size: "20m³",
+                                        position: "left-4 top-[60%]",
+                                        delay: 0.6
+                                    },
+                                    {
+                                        size: "30m³",
+                                        position: "right-4 top-[70%]",
+                                        delay: 0.8
+                                    }
+                                ].map((container, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                        className: `absolute ${container.position}`,
+                                        variants: containerVariants,
+                                        initial: "hidden",
+                                        animate: "visible",
+                                        transition: {
+                                            duration: 0.6,
+                                            delay: container.delay,
+                                            type: "spring",
+                                            stiffness: 100
+                                        },
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                            className: "bg-white/10 backdrop-blur-sm border border-white/20 p-4 sm:p-6 rounded-xl hover:bg-white/20 transition-all duration-300 cursor-pointer  hover:border-blue-500 shadow-lg",
+                                            whileHover: {
+                                                scale: 1.1,
+                                                backgroundColor: "rgba(255, 255, 255, 0.2)"
+                                            },
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-2xl sm:text-3xl font-semibold text-white",
+                                                children: container.size
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                                lineNumber: 149,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                            lineNumber: 140,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, index, false, {
+                                        fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                        lineNumber: 127,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                lineNumber: 120,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "lg:hidden grid grid-cols-2 gap-4 pb-8",
+                                children: [
+                                    {
+                                        size: "6m³",
+                                        delay: 0.2
+                                    },
+                                    {
+                                        size: "12m³",
+                                        delay: 0.4
+                                    },
+                                    {
+                                        size: "20m³",
+                                        delay: 0.6
+                                    },
+                                    {
+                                        size: "30m³",
+                                        delay: 0.8
+                                    }
+                                ].map((container, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                        variants: containerVariants,
+                                        initial: "hidden",
+                                        animate: "visible",
+                                        transition: {
+                                            duration: 0.6,
+                                            delay: container.delay,
+                                            type: "spring",
+                                            stiffness: 100
+                                        },
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                            className: "bg-white/10 backdrop-blur-sm border border-white/20 p-4 rounded-xl hover:bg-white/20 transition-all duration-300 cursor-pointer  hover:border-blue-500 shadow-lg text-center",
+                                            whileHover: {
+                                                scale: 1.05,
+                                                backgroundColor: "rgba(255, 255, 255, 0.2)"
+                                            },
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xl sm:text-2xl font-semibold text-white",
+                                                children: container.size
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                                lineNumber: 186,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                            lineNumber: 177,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, index, false, {
+                                        fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                        lineNumber: 165,
+                                        columnNumber: 17
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                                lineNumber: 158,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
+                        lineNumber: 60,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
                     fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                    lineNumber: 56,
+                    lineNumber: 59,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                lineNumber: 55,
+                lineNumber: 58,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$ContainerAssistantModal$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1995,17 +2274,21 @@ const HeroSection = ()=>{
                 onClose: ()=>setModalOpen(false)
             }, void 0, false, {
                 fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-                lineNumber: 151,
+                lineNumber: 197,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/components/ServicesPage/HeroSection.js",
-        lineNumber: 34,
+        lineNumber: 38,
         columnNumber: 5
     }, this);
 };
-_s(HeroSection, "o+ymuZc6VVdUpCAroHabBGZ51VI=");
+_s(HeroSection, "tOPrTg/X46qZZzM6fCelblqBIO8=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
 _c = HeroSection;
 const __TURBOPACK__default__export__ = HeroSection;
 var _c;

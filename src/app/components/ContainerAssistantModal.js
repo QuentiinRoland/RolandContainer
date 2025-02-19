@@ -1,56 +1,85 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation"; // Import de useRouter
+import { useRouter } from "next/navigation";
 
 const ContainerAssistantModal = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState({});
-  const router = useRouter(); // Initialisation du router
+  const router = useRouter();
 
-  const handleRedirect = () => {
-    router.push("/contact");
-  };
-
-  // Questions du quiz
   const questions = [
     {
-      question: "Quel type de déchets avez-vous ?",
-      options: ["Gravats", "Bois", "Plastique", "Mélange"],
+      question: "Type de déchets ?",
+      options: [
+        "Eternit",
+        "Déchets verts",
+        "Bois",
+        "Inertes",
+        "Plâtres",
+        "Gyproc",
+        "Terres",
+        "Tout venant",
+      ],
       key: "type",
     },
     {
-      question: "Quelle est la quantité approximative ?",
-      options: ["1-2m³", "5m³", "10m³", "Plus de 15m³"],
+      question: "Quantité estimée ?",
+      options: [
+        "Petit volume (1-5m³)",
+        "Moyen volume (5-10m³)",
+        "Grand volume (10-20m³)",
+        "Très grand volume (20m³+)",
+      ],
       key: "volume",
-    },
-    {
-      question: "Avez-vous des objets lourds ou encombrants ?",
-      options: ["Oui", "Non"],
-      key: "encombrant",
     },
   ];
 
-  // Fonction pour déterminer la recommandation
+  const getContainerSpecs = (type, volume) => {
+    let containerSize;
+    switch (volume) {
+      case "Petit volume (1-5m³)":
+        containerSize = "5m³";
+        break;
+      case "Moyen volume (5-10m³)":
+        containerSize = "10m³";
+        break;
+      case "Grand volume (10-20m³)":
+        containerSize = "20m³";
+        break;
+      case "Très grand volume (20m³+)":
+        containerSize = "30m³";
+        break;
+      default:
+        containerSize = "10m³";
+    }
+
+    return {
+      container: `Container ${containerSize}`,
+      category: type,
+      weightLimit: "Poids selon type",
+      details: "Conteneur adapté à vos besoins",
+    };
+  };
+
   const getRecommendation = () => {
-    if (answers.type === "Gravats" && answers.volume === "1-2m³") {
-      return "Container 6m³ pour Gravats";
-    }
-    if (answers.volume === "Plus de 15m³") {
-      return "Container 30m³ pour Déchets volumineux";
-    }
-    if (answers.encombrant === "Oui") {
-      return "Container 20m³ avec grande ouverture";
-    }
-    return "Container standard 10m³";
+    const { type, volume } = answers;
+    if (!type || !volume)
+      return {
+        container: "Container standard",
+        category: "À déterminer",
+        weightLimit: "À déterminer",
+        details: "Nous vous conseillons sur place",
+      };
+
+    return getContainerSpecs(type, volume);
   };
 
   const handleAnswer = (option) => {
     setAnswers({ ...answers, [questions[step].key]: option });
-
     if (step < questions.length - 1) {
       setStep(step + 1);
     } else {
-      setStep(questions.length); // Affiche la recommandation
+      setStep(questions.length);
     }
   };
 
@@ -58,53 +87,68 @@ const ContainerAssistantModal = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/50 flex justify-center items-center z-50"
+          className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full"
-            initial={{ scale: 0.8 }}
+            className="bg-white rounded-lg shadow-xl max-w-md w-full"
+            initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
+            exit={{ scale: 0.9 }}
           >
-            <h2 className="text-xl font-bold mb-4">
-              {step < questions.length
-                ? questions[step].question
-                : "Votre container recommandé"}
-            </h2>
+            <div className="p-6">
+              <h2 className="text-xl font-bold mb-6">
+                {step < questions.length
+                  ? questions[step].question
+                  : "Notre recommandation"}
+              </h2>
 
-            <div className="space-y-4">
-              {step < questions.length ? (
-                questions[step].options.map((option, index) => (
-                  <button
-                    key={index}
-                    className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-                    onClick={() => handleAnswer(option)}
-                  >
-                    {option}
-                  </button>
-                ))
-              ) : (
-                <div>
-                  <p className="text-lg font-semibold text-green-600 mb-4">
-                    🎉 {getRecommendation()}
-                  </p>
-                  <button
-                    className="w-full py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition mb-4"
-                    onClick={onClose}
-                  >
-                    Fermer
-                  </button>
-                  <button
-                    className="w-full py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400 transition"
-                    onClick={handleRedirect}
-                  >
-                    Réserver un devis
-                  </button>
-                </div>
-              )}
+              <div className="space-y-3">
+                {step < questions.length ? (
+                  questions[step].options.map((option, index) => (
+                    <button
+                      key={index}
+                      className="w-full p-3 bg-white border-2 border-blue-500 text-blue-500 
+                               rounded-lg hover:bg-blue-50 transition"
+                      onClick={() => handleAnswer(option)}
+                    >
+                      {option}
+                    </button>
+                  ))
+                ) : (
+                  <div>
+                    <div className="bg-green-50 p-4 rounded-lg mb-4 space-y-2">
+                      <h3 className="text-lg font-bold text-green-700">
+                        {getRecommendation().container}
+                      </h3>
+                      <div className="space-y-2 text-green-600">
+                        <p>
+                          <span className="font-semibold">Catégorie : </span>
+                          {getRecommendation().category}
+                        </p>
+                      </div>
+                    </div>
+
+                    <button
+                      className="w-full p-3 bg-green-500 text-white rounded-lg 
+                               hover:bg-green-600 transition mb-3"
+                      onClick={() => router.push("/contact")}
+                    >
+                      Demander un devis
+                    </button>
+
+                    <button
+                      className="w-full p-3 bg-gray-200 text-gray-700 rounded-lg 
+                               hover:bg-gray-300 transition"
+                      onClick={onClose}
+                    >
+                      Fermer
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
         </motion.div>

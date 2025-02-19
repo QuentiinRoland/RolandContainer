@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const ServicesSection = () => {
+  const router = useRouter();
+
   // Variants pour les cartes de service
   const cardVariants = {
     hidden: {
@@ -24,6 +27,10 @@ const ServicesSection = () => {
       opacity: 1,
       scale: 1,
     },
+  };
+
+  const handleDevisClick = () => {
+    router.push("/contact");
   };
 
   return (
@@ -116,6 +123,7 @@ const ServicesSection = () => {
             className="bg-orange-500 px-4 py-2 rounded-md shadow-sm"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={handleDevisClick}
           >
             Demandez votre devis
           </motion.button>
