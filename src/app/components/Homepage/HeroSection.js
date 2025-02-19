@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const HeroSection = () => {
   const router = useRouter();
@@ -26,7 +29,6 @@ const HeroSection = () => {
   return (
     <div className="relative min-h-screen bg-white">
       <div className="relative h-screen grid grid-cols-1 lg:grid-cols-12">
-        {/* Text Content Section */}
         <div className="col-span-1 lg:col-span-5 flex flex-col justify-center px-4 sm:px-8 lg:px-16 py-12 lg:py-24 relative z-10 mx-4 sm:mx-8">
           <motion.div
             className="text-xs sm:text-sm text-gray-500 mb-4 sm:mb-8"
@@ -89,15 +91,22 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Image Section */}
         <div className="absolute lg:relative lg:col-span-7 inset-0 bg-black/5">
           <div className="absolute inset-0">
-            <img
-              src="/wallpaperHero.jpg"
-              alt="Camion de transport professionnel"
-              className="object-cover w-full h-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/50 to-transparent lg:hidden" />
+            <div className="relative w-full h-full">
+              <Image
+                src="/wallpaperHero.jpg"
+                alt="Camion de transport professionnel"
+                fill
+                priority
+                quality={85}
+                sizes="(max-width: 1024px) 100vw, 58.33vw"
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/50 to-transparent lg:hidden" />
+            </div>
           </div>
 
           <motion.div
