@@ -64,16 +64,40 @@ const OtherSection = () => {
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-start text-black">
-                    <span className="text-red-500 mr-2">•</span>à remplir par
-                    tonton ou charlie
+                    <span className="text-red-500 mr-2">•</span>Les produits
+                    dangereux (récipients sous pression comme les bonbonnes de
+                    gaz et les aérosols)
                   </li>
                   <li className="flex items-start text-black">
-                    <span className="text-red-500 mr-2">•</span>à remplir par
-                    tonton ou charlie
+                    <span className="text-red-500 mr-2">•</span>Les substances
+                    dangereuses chimiques ou toxiques
                   </li>
                   <li className="flex items-start text-black">
-                    <span className="text-red-500 mr-2">•</span>à remplir par
-                    tonton ou charlie
+                    <span className="text-red-500 mr-2">•</span>Les appareils
+                    électriques et électroniques 
+                  </li>
+                  <li className="flex items-start text-black">
+                    <span className="text-red-500 mr-2">•</span>Pneus
+                  </li>
+                  <li className="flex items-start text-black">
+                    <span className="text-red-500 mr-2">•</span>Poubelles
+                    ménagères
+                  </li>
+                  <li className="flex items-start text-black">
+                    <span className="text-red-500 mr-2">•</span>Amiantes
+                  </li>
+                  <li className="flex items-start text-black">
+                    <span className="text-red-500 mr-2">•</span>Peintures
+                  </li>
+                  <li className="flex items-start text-black">
+                    <span className="text-red-500 mr-2">•</span>Plâtre
+                  </li>
+                  <li className="flex items-start text-black">
+                    <span className="text-red-500 mr-2">•</span>Gyoroc
+                  </li>
+                  <li className="flex items-start text-black">
+                    <span className="text-red-500 mr-2">•</span>Liquides et
+                    produits pulvérulents (matière poudreuse) 
                   </li>
                 </ul>
               </div>

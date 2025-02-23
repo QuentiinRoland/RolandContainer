@@ -25,7 +25,6 @@ export default function Services() {
           </h2>
           <DiagonalSection />
           <GridFlexSections />
-          <OtherSection />
         </div>
       </div>
       <Spacer lg />

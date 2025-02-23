@@ -37,7 +37,7 @@ const DiagonalSection = () => {
 
           <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-1 lg:order-2 bg-gray-50 lg:bg-transparent">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-black">
-              Terres / Terres + Inertes
+              Terres + Inertes
             </h2>
             <div className="space-y-4 sm:space-y-6">
               <div>
@@ -47,15 +47,20 @@ const DiagonalSection = () => {
                 <ul className="space-y-2 sm:space-y-3">
                   <li className="flex items-start text-black text-sm sm:text-base">
                     <span className="text-green-500 mr-2 text-lg">•</span>à
-                    remplir par tonton ou charlie
+                    Gravats, briques, pierres
                   </li>
                   <li className="flex items-start text-black text-sm sm:text-base">
                     <span className="text-green-500 mr-2 text-lg">•</span>à
-                    remplir par tonton ou charlie
+                    Béton, ciment
                   </li>
                   <li className="flex items-start text-black text-sm sm:text-base">
                     <span className="text-green-500 mr-2 text-lg">•</span>à
-                    remplir par tonton ou charlie
+                    Terres
+                  </li>
+                  <li className="flex items-start text-black text-sm sm:text-base">
+                    <span className="text-green-500 mr-2 text-lg">•</span>à
+                    Minimum 25% de déchets inertes si moins passe en containers
+                    terres
                   </li>
                 </ul>
               </div>
@@ -66,16 +71,29 @@ const DiagonalSection = () => {
                 </h3>
                 <ul className="space-y-2 sm:space-y-3">
                   <li className="flex items-start text-black text-sm sm:text-base">
-                    <span className="text-red-500 mr-2 text-lg">•</span>à
-                    remplir par tonton ou charlie
+                    <span className="text-red-500 mr-2 text-lg">•</span>Plâtre
+                    (Ytong, …) : à recycler avec les déchets plâtre/Ytong/béton
+                    cellulaire
                   </li>
                   <li className="flex items-start text-black text-sm sm:text-base">
-                    <span className="text-red-500 mr-2 text-lg">•</span>à
-                    remplir par tonton ou charlie
+                    <span className="text-red-500 mr-2 text-lg">•</span>
+                    Amiante-ciment : à recycler avec les déchets amiante
                   </li>
                   <li className="flex items-start text-black text-sm sm:text-base">
-                    <span className="text-red-500 mr-2 text-lg">•</span>à
-                    remplir par tonton ou charlie
+                    <span className="text-red-500 mr-2 text-lg">•</span>Litières
+                    d’animaux : à recycler avec les déchets ménager
+                  </li>
+                  <li className="flex items-start text-black text-sm sm:text-base">
+                    <span className="text-red-500 mr-2 text-lg">•</span>Terres
+                    souillées par produits dangereux
+                  </li>
+                  <li className="flex items-start text-black text-sm sm:text-base">
+                    <span className="text-red-500 mr-2 text-lg">•</span>Miroir :
+                    à recycler avec les déchets tout venant
+                  </li>
+                  <li className="flex items-start text-black text-sm sm:text-base">
+                    <span className="text-red-500 mr-2 text-lg">•</span>Vitrage
+                    : à recycler avec les déchets verres
                   </li>
                 </ul>
               </div>

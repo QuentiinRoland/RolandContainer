@@ -66,11 +66,11 @@ const HeroSection = () => {
                 animate="visible"
                 transition={{ duration: 0.6 }}
               >
-                Trouvez le container
+                Location de containers
                 <br />
-                idéal pour votre
+                tous volumes
                 <br />
-                stockage
+                tous usages
               </motion.h1>
 
               <motion.p
