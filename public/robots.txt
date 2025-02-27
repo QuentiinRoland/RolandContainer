@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.rolandcontainer.be
+
+# Sitemaps
+Sitemap: https://www.rolandcontainer.be/sitemap.xml
